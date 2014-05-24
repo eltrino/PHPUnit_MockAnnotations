@@ -1,7 +1,7 @@
 PHPUnit MockAnnotations
 =======================
 
-This provide a simplified way to create native PHPUnit mocks in test cases using annotations in properties doc block. Currently creating of mocks for abstract classes is not support.
+This provide a simplified way to create native PHPUnit mocks in test cases using annotations in properties doc block. Currently creation of mocks for abstract classes is not supported.
 
 Installation
 ============
