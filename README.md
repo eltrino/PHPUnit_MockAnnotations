@@ -8,7 +8,7 @@ Installation
 Installation via composer
 
 ```
-composer require psw/phpunit-mockannotations
+composer require eltrino/phpunit-mockannotations
 ```
 or add it to your composer.json file.
 
@@ -40,7 +40,7 @@ class GeneratorTest extends \PHPUnit_Framework_TestCase
             ->expects($this->once())
             ->method('getOption')
             ->with($this->equalTo('title'))
-            ->will($this->returnValue('option_value));
+            ->will($this->returnValue('option_value'));
             
         $generator = new Generator($this->config);
         $result = $generator->process();
