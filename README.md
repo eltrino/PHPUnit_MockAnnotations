@@ -31,7 +31,7 @@ class GeneratorTest extends \PHPUnit_Framework_TestCase
     
     protected function setUp()
     {
-        MockAnnotations.init($this);
+        MockAnnotations::init($this);
     }
     
     public function testProcess()
