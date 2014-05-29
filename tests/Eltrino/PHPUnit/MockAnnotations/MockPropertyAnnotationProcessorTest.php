@@ -1,12 +1,12 @@
 <?php
 
-namespace PHPUnitMockAnnotations;
+namespace Eltrino\PHPUnit\MockAnnotations;
 
 class MockPropertyAnnotationProcessorTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @var PHPUnit_Framework_MockObject_MockObject
-     * @Mock PHPUnitMockAnnotations\Tests\Fixture\BInterface
+     * @Mock Eltrino\PHPUnit\MockAnnotations\Tests\Fixture\BInterface
      */
     private $stubPropertyToMock;
 
@@ -20,22 +20,27 @@ class MockPropertyAnnotationProcessorTest extends \PHPUnit_Framework_TestCase
             ->getMock();
 
         $mockObjectFactory = $this
-            ->getMockBuilder('PHPUnitMockAnnotations\MockObjectFactory')
+            ->getMockBuilder('Eltrino\PHPUnit\MockAnnotations\MockObjectFactory')
             ->getMock();
 
         $mock = $this
-            ->getMockBuilder('PHPUnitMockAnnotations\Tests\Fixture\BInterface')
+            ->getMockBuilder('Eltrino\PHPUnit\MockAnnotations\Tests\Fixture\BInterface')
             ->getMock();
 
         $mockObjectFactory
             ->expects($this->once())
             ->method('create')
-            ->with($this->equalTo('PHPUnitMockAnnotations\Tests\Fixture\BInterface'))
+            ->with($this->equalTo('Eltrino\PHPUnit\MockAnnotations\Tests\Fixture\BInterface'))
             ->will($this->returnValue($mock));
 
         $property = new \ReflectionProperty($this, 'stubPropertyToMock');
 
         $processor = new MockPropertyAnnotationProcessor($mockObjectFactory);
         $processor->process($property, $this);
+
+        $this->assertNotNull($this->stubPropertyToMock);
+        $this->assertTrue(
+            ($this->stubPropertyToMock instanceof \Eltrino\PHPUnit\MockAnnotations\Tests\Fixture\BInterface)
+        );
     }
 }

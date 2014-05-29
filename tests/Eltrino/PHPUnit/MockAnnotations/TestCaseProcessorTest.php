@@ -1,15 +1,13 @@
 <?php
 
-namespace PHPUnitMockAnnotations;
-
-use PHPUnitMockAnnotations\TestCaseProcessor;
+namespace Eltrino\PHPUnit\MockAnnotations;
 
 class TestCaseProcessorTest extends \PHPUnit_Framework_TestCase
 {
     public function testProcess()
     {
         $annotationProcessor = $this
-            ->getMockBuilder('PHPUnitMockAnnotations\PropertyAnnotationProcessor')
+            ->getMockBuilder('Eltrino\PHPUnit\MockAnnotations\PropertyAnnotationProcessor')
             ->getMock();
 
         $annotationProcessor

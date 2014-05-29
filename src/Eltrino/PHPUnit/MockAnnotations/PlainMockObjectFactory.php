@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPUnitMockAnnotations;
+namespace Eltrino\PHPUnit\MockAnnotations;
 
 class PlainMockObjectFactory implements MockObjectFactory
 {

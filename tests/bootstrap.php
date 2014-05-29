@@ -1,4 +1,4 @@
 <?php
 
 $loader = require __DIR__ . "/../vendor/autoload.php";
-$loader->add('PHPUnitMockAnnotations\\', __DIR__);
+$loader->add('Eltrino\PHPUnit\MockAnnotations\\', __DIR__);
