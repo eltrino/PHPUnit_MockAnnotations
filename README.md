@@ -21,7 +21,7 @@ namespace Lib\Tests;
 
 use Lib\Generator;
 use Lib\ConfigInterface;
-use PHPUnitMockAnnotations\MockAnnotations;
+use Eltrino\PHPUnit\MockAnnotations\MockAnnotations;
 
 class GeneratorTest extends \PHPUnit_Framework_TestCase
 {
