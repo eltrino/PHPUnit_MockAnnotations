@@ -55,4 +55,4 @@ MIT
 
 ## Contributing
 
-We welcome all kinds of contributions in the form of bug reporting, patches submition, feature requests or documentation enhancement. Please refer to our [guidelines for contributing](http://docs.diamantedesk.com/en/latest/developer-guide/contributing.html) if you wish to be a part of the project.
+We welcome all kinds of contributions in the form of bug reporting, patches submition, feature requests or documentation enhancement. Please refer to our [guidelines for contributing](https://github.com/eltrino/PHPUnit_MockAnnotations/blob/master/Contributing.md) if you wish to be a part of the project.
