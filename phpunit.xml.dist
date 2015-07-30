@@ -3,7 +3,7 @@
 <phpunit bootstrap="tests/bootstrap.php" colors="true">
     <testsuites>
         <testsuite name="PHPUnitMockAnnotations Test Suite">
-            <directory>tests/PHPUnitMockAnnotations/</directory>
+            <directory>tests/</directory>
         </testsuite>
     </testsuites>
 
