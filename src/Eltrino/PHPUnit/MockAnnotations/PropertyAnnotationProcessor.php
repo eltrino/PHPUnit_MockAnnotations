@@ -2,13 +2,15 @@
 
 namespace Eltrino\PHPUnit\MockAnnotations;
 
+use PHPUnit\Framework\TestCase;
+
 interface PropertyAnnotationProcessor
 {
     /**
      * Property processing
      * @param \ReflectionProperty $property
-     * @param \PHPUnit_Framework_TestCase $test
+     * @param TestCase $test
      * @return void
      */
-    function process(\ReflectionProperty $property, \PHPUnit_Framework_TestCase $test);
+    function process(\ReflectionProperty $property, TestCase $test);
 }

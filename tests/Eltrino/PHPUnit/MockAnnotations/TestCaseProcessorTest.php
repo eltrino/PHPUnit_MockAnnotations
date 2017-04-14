@@ -2,7 +2,10 @@
 
 namespace Eltrino\PHPUnit\MockAnnotations;
 
-class TestCaseProcessorTest extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\Constraint\IsType;
+use PHPUnit\Framework\TestCase;
+
+class TestCaseProcessorTest extends TestCase
 {
     public function testProcess()
     {
@@ -15,7 +18,7 @@ class TestCaseProcessorTest extends \PHPUnit_Framework_TestCase
             ->method('process')
             ->with(
                 $this->logicalAnd(
-                    $this->isType(\PHPUnit_Framework_Constraint_IsType::TYPE_OBJECT),
+                    $this->isType(IsType::TYPE_OBJECT),
                     $this->isInstanceOf('\ReflectionProperty')
                 ), $this->equalTo($this)
             );

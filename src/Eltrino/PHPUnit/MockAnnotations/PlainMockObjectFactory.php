@@ -2,11 +2,13 @@
 
 namespace Eltrino\PHPUnit\MockAnnotations;
 
+use PHPUnit\Framework\TestCase;
+
 class PlainMockObjectFactory implements MockObjectFactory
 {
     private $testCase;
 
-    public function __construct(\PHPUnit_Framework_TestCase $testCase)
+    public function __construct(TestCase$testCase)
     {
         $this->testCase = $testCase;
     }

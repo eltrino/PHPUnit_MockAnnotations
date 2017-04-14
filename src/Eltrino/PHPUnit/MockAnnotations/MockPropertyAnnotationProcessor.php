@@ -2,6 +2,8 @@
 
 namespace Eltrino\PHPUnit\MockAnnotations;
 
+use PHPUnit\Framework\TestCase;
+
 class MockPropertyAnnotationProcessor implements PropertyAnnotationProcessor
 {
     const REGEX_MOCK = '(@Mock\s+([:.\w\\\\x7f-\xff]+)\s*$)m';
@@ -20,10 +22,10 @@ class MockPropertyAnnotationProcessor implements PropertyAnnotationProcessor
      * Property processing
      * Generate and assign mock object to property if it has @Mock annoitation
      * @param \ReflectionProperty $property
-     * @param \PHPUnit_Framework_TestCase $test
+     * @param TestCase $test
      * @return void
      */
-    public function process(\ReflectionProperty $property, \PHPUnit_Framework_TestCase $test)
+    public function process(\ReflectionProperty $property, TestCase $test)
     {
         /** @var \ReflectionProperty $property */
         $propertyDocComment = $property->getDocComment();

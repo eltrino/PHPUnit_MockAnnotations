@@ -2,6 +2,8 @@
 
 namespace Eltrino\PHPUnit\MockAnnotations;
 
+use PHPUnit\Framework\TestCase;
+
 class TestCaseProcessor implements Processor
 {
     private $exceptions = array();
@@ -19,10 +21,10 @@ class TestCaseProcessor implements Processor
     /**
      * Test Case processing
      * Create mock objects for properties of given test case that has annotation @Mock
-     * @param \PHPUnit_Framework_TestCase $test
+     * @param TestCase $test
      * @return void
      */
-    public function process(\PHPUnit_Framework_TestCase $test)
+    public function process(TestCase $test)
     {
         $clazz = new \ReflectionObject($test);
         $properties = $clazz->getProperties();

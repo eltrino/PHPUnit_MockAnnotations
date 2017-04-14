@@ -2,7 +2,9 @@
 
 namespace Eltrino\PHPUnit\MockAnnotations;
 
-class MockPropertyAnnotationProcessorTest extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class MockPropertyAnnotationProcessorTest extends TestCase
 {
     /**
      * @var PHPUnit_Framework_MockObject_MockObject

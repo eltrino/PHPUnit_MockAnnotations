@@ -20,8 +20,9 @@ namespace Lib\Tests;
 use Lib\Generator;
 use Lib\ConfigInterface;
 use Eltrino\PHPUnit\MockAnnotations\MockAnnotations;
+use PHPUnit\Framework\TestCase;
 
-class GeneratorTest extends \PHPUnit_Framework_TestCase
+class GeneratorTest extends TestCase
 {
     /**
      * @Mock Lib\ConfigInterface

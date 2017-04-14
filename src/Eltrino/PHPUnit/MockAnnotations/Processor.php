@@ -2,12 +2,14 @@
 
 namespace Eltrino\PHPUnit\MockAnnotations;
 
+use PHPUnit\Framework\TestCase;
+
 interface Processor
 {
     /**
      * Test Case processing
-     * @param \PHPUnit_Framework_TestCase $test
+     * @param TestCase $test
      * @return void
      */
-    function process(\PHPUnit_Framework_TestCase $test);
+    function process(TestCase $test);
 }
